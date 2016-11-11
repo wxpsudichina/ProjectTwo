@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="@color/mainColor">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@mipmap/go_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="注册"
+                android:textColor="@android:color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48px"
+            android:src="@mipmap/feather" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12px"
+            android:text="请填写真实的相关信息" />
+
+        <com.sudichina.ftwl.customview.TitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="58px"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            android:layout_marginTop="50px"
+            app:line_color="#d1d1d1"
+            app:line_height="2px"
+            app:title_color="#999999"
+            app:title_size="30px"
+            app:title_text="车主信息" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="132px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:background="@drawable/quick_login_input_border"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="290px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="姓名"
+                android:textColor="#333333"
+                android:textSize="46px" />
+
+            <EditText
+                android:id="@+id/et_real_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入您的手机号"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="#cccccc"
+                android:textCursorDrawable="@null"
+                android:textSize="40px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="132px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="24px"
+            android:background="@drawable/quick_login_input_border"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="290px"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="驾驶证"
+                android:textColor="#333333"
+                android:textSize="46px" />
+
+            <EditText
+                android:id="@+id/et_driving_licence"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入您的密码"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="#cccccc"
+                android:textCursorDrawable="@null"
+                android:textSize="40px" />
+
+        </LinearLayout>
+
+        <com.sudichina.ftwl.customview.TitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60px"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            android:layout_marginTop="70px"
+            app:line_color="#d1d1d1"
+            app:line_height="2px"
+            app:title_color="#999999"
+            app:title_size="30px"
+            app:title_text="驾驶证照片" />
+
+        <ImageView
+            android:id="@+id/iv_driver"
+            android:layout_width="500px"
+            android:layout_height="300px"
+            android:src="@mipmap/driving_license" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70px"
+            android:text="你们照片仅用于审核，我们将严格保密" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffba00"
+        android:text="认证"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>

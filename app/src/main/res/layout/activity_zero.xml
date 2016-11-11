@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"></com.amap.api.maps.MapView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="147px"
+        android:background="#363639">
+
+        <ImageView
+            android:id="@+id/activ_zero_iv_back"
+            android:layout_width="35px"
+            android:layout_height="50px"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="45px"
+            android:src="@mipmap/zero_iv_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="发布零担王"
+            android:textColor="#ffffff"
+            android:textSize="60px"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220px"
+        android:layout_margin="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="70px"
+        android:background="@drawable/bg_round_white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="790px"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_start"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableLeft="@mipmap/zero_iv_location_1"
+                android:drawablePadding="30px"
+                android:editable="false"
+                android:gravity="center|center_vertical"
+                android:hint="北京市朝阳区"
+                android:paddingLeft="22px"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="790px"
+                android:layout_height="1px"
+                android:background="#999999" />
+
+            <EditText
+                android:id="@+id/et_dest"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableLeft="@mipmap/zero_iv_location"
+                android:drawablePadding="30px"
+                android:gravity="center|center_vertical"
+                android:hint="到哪去"
+                android:editable="false"
+                android:paddingLeft="22px"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#999999" />
+
+        <LinearLayout
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:src="@mipmap/zero_iv_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="36px"
+                android:layout_marginRight="46px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="常用路线"
+                android:textSize="24px"
+                android:textColor="#999999"
+                android:layout_marginTop="16px"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            android:layout_marginTop="40px">
+
+        <EditText
+            android:id="@+id/et_car"
+            android:layout_width="480px"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_round_white"
+            android:drawableLeft="@mipmap/zero_iv_car"
+            android:drawablePadding="30px"
+            android:paddingLeft="22px"
+            android:text="派单车辆"
+            android:editable="false"
+            android:textColor="#999999"
+            android:textSize="40px" />
+
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="480px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24px"
+            android:background="@drawable/bg_round_white"
+            android:drawableLeft="@mipmap/zero_iv_clock"
+            android:drawablePadding="30px"
+            android:editable="false"
+            android:paddingLeft="22px"
+            android:text="选择运期"
+            android:textColor="#999999"
+            android:textSize="40px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="40px">
+
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="480px"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_round_white"
+            android:drawableLeft="@mipmap/zero_iv_money"
+            android:drawablePadding="30px"
+            android:paddingLeft="22px"
+            android:text="线路报价"
+            android:textColor="#999999"
+            android:editable="false"
+            android:textSize="40px" />
+
+        <EditText
+            android:id="@+id/et_value_added_service"
+            android:layout_width="480px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24px"
+            android:background="@drawable/bg_round_white"
+            android:drawableLeft="@mipmap/zero_iv_more"
+            android:drawablePadding="30px"
+            android:editable="false"
+            android:paddingLeft="22px"
+            android:text="可选的增值服务"
+            android:textColor="#999999"
+            android:textSize="40px" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pub"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:layout_marginLeft="48px"
+        android:layout_marginRight="48px"
+        android:layout_marginTop="100px"
+        android:background="#ffba00"
+        android:text="发布"
+        android:textColor="#ffffff"
+        android:textSize="60px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="190px"
+        android:background="#999999" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="40px"
+            android:src="@mipmap/zero_log" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140px"
+            android:layout_marginTop="60px"
+            android:text="保运通——更放心"
+            android:textSize="34px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="50px"
+            android:layout_marginTop="120px"
+            android:text="分通网车辆认证体系使得托运人无需与承运人建立熟关系，正式这样，150多万的个体车主与物流公司车辆竞争，运输费用参差不齐，本地车辆很难与回程车辆在运价上竞争，而货主选择回程车大大降低了物流成本"
+            android:textColor="#bababa"
+            android:textSize="30px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="260px"
+            android:text="解决方案:"
+            android:textColor="#bababa"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210px"
+            android:layout_marginTop="260px"
+            android:text="联合保险企业为货物承保，为个体车主解决运输发票问题"
+            android:textColor="#bababa"
+            android:textSize="30px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="335px"
+            android:text="产品特点:"
+            android:textColor="#bababa"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="370px"
+            android:text="托运人:"
+            android:textColor="#bababa"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210px"
+            android:layout_marginTop="370px"
+            android:text="有保险省心，且发货不是很急，可预订运费更低的车辆"
+            android:textColor="#bababa"
+            android:textSize="30px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="410px"
+            android:text="承运人:"
+            android:textColor="#bababa"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210px"
+            android:layout_marginTop="410px"
+            android:text="可提前对线路报价，订单运输再不用担心回程货问题"
+            android:textColor="#bababa"
+            android:textSize="30px" />
+    </RelativeLayout>
+
+</LinearLayout>

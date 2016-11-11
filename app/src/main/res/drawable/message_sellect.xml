@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--订单按钮的选择-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/message_normal" />
+    <item android:drawable="@mipmap/message_normal" android:state_pressed="false" />
+    <!-- 触摸模式按下时的背景图片 -->
+    <item android:drawable="@mipmap/message_selected" android:state_pressed="true" />
+</selector>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.fanrunqi.swipelayoutlibrary.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipelayout"
+    android:layout_marginTop="20px"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="120px"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_car_first_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:text="京"
+            android:textColor="#666666"
+            android:textSize="38px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_plate_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_car_first_letter"
+            android:text="ANQ289"
+            android:textColor="#666666"
+            android:textSize="38px" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:text="已通过"
+            android:textColor="#666666"
+            android:textSize="22px" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="288px"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_modify"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#171313"
+            android:text="修改"
+            android:textColor="@android:color/white"
+            android:textSize="36px" />
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#e6523c"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:textSize="36px" />
+
+    </LinearLayout>
+
+</cn.fanrunqi.swipelayoutlibrary.SwipeLayout>

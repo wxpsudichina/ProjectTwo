@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edeaf0"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="216px"
+        android:background="#36353a">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90px"
+            android:src="@mipmap/avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="58px"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40px"
+                android:text="Jjdfkg"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="183****2536"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_angle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="100px"
+            android:src="@mipmap/arrow_left_grey" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="30px"
+            android:paddingTop="70px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26px"
+                android:text="0.00元"
+                android:textColor="#ff9a01"
+                android:textSize="50px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的余额"
+                android:textColor="#686868"
+                android:textSize="34px" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#bdbdbd" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="30px"
+            android:paddingTop="70px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26px"
+                android:text="0个"
+                android:textColor="#ff613e"
+                android:textSize="50px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的红包"
+                android:textColor="#686868"
+                android:textSize="34px" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#bdbdbd" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="30px"
+            android:paddingTop="70px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26px"
+                android:text="0.00分"
+                android:textColor="#69c209"
+                android:textSize="50px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的积分"
+                android:textColor="#686868"
+                android:textSize="34px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40px">
+
+        <RelativeLayout
+            android:id="@+id/rl_id_verification"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份验证"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:id="@+id/iv_id_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/unverified" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_vehicle_certification"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider_double"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车辆验证"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:id="@+id/iv_vehicle_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/unverified" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_marginTop="40px"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的红包"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/arrow_left_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的礼券"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/arrow_left_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider_double"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的积分"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/arrow_left_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_marginTop="40px"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帮助说明"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/arrow_left_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关于我们"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/arrow_left_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_marginBottom="80px"
+            android:layout_weight="1"
+            android:background="@drawable/item_divider_double"
+            android:gravity="center_vertical"
+            android:paddingEnd="90px"
+            android:paddingStart="90px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置"
+                android:textColor="#333333"
+                android:textSize="45px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:src="@mipmap/arrow_left_grey" />
+
+        </RelativeLayout>
+
+    </TableLayout>
+
+</LinearLayout>

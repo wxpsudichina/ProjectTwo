@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="170px"
+        android:background="#35363a">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:src="@mipmap/iv_fragment_own" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="分通"
+            android:textColor="#ffffff"
+            android:textSize="64px"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_home_fragment_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:src="@mipmap/iv_fragment_message" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="400px" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_release_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50px"
+        android:layout_marginTop="72dp"
+        android:src="@mipmap/iv_homefragment_fabu" />
+
+    <ImageView
+        android:id="@+id/iv_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="30px"
+        android:src="@mipmap/iv_home_faragment_yue" />
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ebebeb"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="156px"
+            android:layout_marginBottom="20px"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_single_vehicle"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="498px"
+                android:layout_height="100px"
+                android:layout_marginLeft="28px"
+                android:background="@drawable/btn_selected"
+                android:text="请选择派单车辆"
+                android:textColor="#439198"
+                android:textSize="40px" />
+
+            <Button
+                android:id="@+id/btn_date"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="498px"
+                android:layout_height="100px"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="28px"
+                android:background="@drawable/btn_selected"
+                android:text="运期"
+                android:textColor="#439198"
+                android:textSize="40px" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_start"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                android:drawableLeft="@mipmap/iv_home_fragment_start"
+                android:drawablePadding="50px"
+                android:singleLine="true"
+                android:text="锋创科技园"
+                android:textColor="#333333"
+                android:textSize="28px"
+                app:met_hideUnderline="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                android:background="#999999" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_stop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                android:drawableLeft="@mipmap/iv_home_fragment_stop"
+                android:drawablePadding="50px"
+                android:text="锋创科技园"
+                android:textColor="#333333"
+                android:textSize="28px"
+                app:met_hideUnderline="true" />
+
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20px">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#cccccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="116px"
+                android:background="#ffffff">
+
+                <Button
+                    android:id="@+id/btn_car_offer"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="整车报价" />
+
+                <Button
+                    android:id="@+id/btn_zero_offer"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="零担报价" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="116px"
+                    android:background="@drawable/et_offer_border"
+                    android:gravity="center"
+                    android:hint="请输入报价"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textColorHint="#999"
+                    android:textSize="34px" />
+
+                <LinearLayout
+                    android:id="@+id/ll_zero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_per_ton"
+                        android:layout_width="0dp"
+                        android:layout_height="116px"
+                        android:layout_weight="1"
+                        android:background="@drawable/et_offer_border"
+                        android:gravity="center"
+                        android:hint="每吨报价"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="#666"
+                        android:textColorHint="#999"
+                        android:textSize="34px" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="58px"
+                        android:background="#cccccc" />
+
+                    <EditText
+                        android:id="@+id/et_per_kilogram"
+                        android:layout_width="0dp"
+                        android:layout_height="116px"
+                        android:layout_weight="1"
+                        android:background="@drawable/et_offer_border"
+                        android:gravity="center"
+                        android:hint="每公斤报价"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="#666"
+                        android:textColorHint="#999"
+                        android:textSize="34px" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="58px"
+                        android:background="#cccccc" />
+
+                    <EditText
+                        android:id="@+id/et_per_cubic"
+                        android:layout_width="0dp"
+                        android:layout_height="116px"
+                        android:layout_weight="1"
+                        android:background="@drawable/et_offer_border"
+                        android:gravity="center"
+                        android:hint="每方报价"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="#666"
+                        android:textColorHint="#999"
+                        android:textSize="34px" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingBottom="28px"
+                android:paddingLeft="36px"
+                android:paddingRight="36px"
+                android:paddingTop="28px">
+
+                <LinearLayout
+                    android:id="@+id/ll_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:tag="unchecked">
+
+                    <ImageView
+                        android:id="@+id/iv_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:src="@mipmap/yes"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="44px"
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:text="含发票"
+                        android:textSize="34px" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_door_to_door"
+                    android:layout_width="0dp"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="36px"
+                    android:layout_marginRight="36px"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_normal"
+                    android:gravity="center"
+                    android:hint="门到门"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textColorHint="#999"
+                    android:textSize="34px" />
+
+                <EditText
+                    android:id="@+id/et_door_to_cfs"
+                    android:layout_width="0dp"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_normal"
+                    android:gravity="center"
+                    android:hint="门到站（场）"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#666"
+                    android:textColorHint="#999"
+                    android:textSize="34px" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_release_route"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="126px"
+                android:background="@drawable/btn_release_route_bg"
+                android:text="确认发布路线"
+                android:textColor="#ffffff"
+                android:textSize="46px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_release_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30px">
+
+            <Button
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="350px"
+                android:layout_height="102px"
+                android:background="@drawable/btn_license_plate_bg"
+                android:text="京AD568"
+                android:textColor="@android:color/white"
+                android:textSize="42px" />
+
+            <Button
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="216px"
+                android:layout_height="102px"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="14px"
+                android:background="@drawable/btn_border_black"
+                android:text="20吨" />
+
+            <Button
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="102px"
+                android:background="@drawable/btn_border_black"
+                android:text="16.09.16-16.09.24" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16px"
+            android:paddingLeft="42px"
+            android:paddingRight="42px"
+            android:paddingTop="16px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/third_people" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="66px"
+                    android:src="@mipmap/second_people" />
+
+                <ImageView
+                    android:id="@+id/iv_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/selected_people" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="58px"
+                    android:layout_marginRight="66px"
+                    android:src="@mipmap/second_people" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/third_people" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/order_form_grey" />
+
+            <TextView
+                android:layout_width="392px"
+                android:layout_height="1px"
+                android:layout_marginLeft="12px"
+                android:layout_marginRight="12px"
+                android:background="@color/baicaoshuang" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/vehicle_grey" />
+
+            <TextView
+                android:layout_width="392px"
+                android:layout_height="1px"
+                android:layout_marginLeft="12px"
+                android:layout_marginRight="12px"
+                android:background="@color/baicaoshuang" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cooperation_grey" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="56px"
+            android:layout_marginTop="16px"
+            android:paddingLeft="42px"
+            android:paddingRight="42px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选单"
+                android:textColor="#439198"
+                android:textSize="28px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/location_grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12px"
+                    android:text="山东菏泽市牡丹区"
+                    android:textColor="#333"
+                    android:textSize="28px" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="完成"
+                android:textSize="28px" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_shipper_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#7f000000"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="end"-->
+    <!--android:layout_marginBottom="20px"-->
+    <!--android:layout_marginRight="18px"-->
+    <!--android:layout_marginTop="20px"-->
+    <!--android:src="@mipmap/close" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="890px"-->
+    <!--android:layout_height="246px"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:background="#bdbdbd">-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="42px"-->
+    <!--android:gravity="center_vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="54px"-->
+    <!--android:layout_marginRight="36px"-->
+    <!--android:src="@mipmap/starting_point" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="北京市海淀区" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="42px"-->
+    <!--android:gravity="center_vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="54px"-->
+    <!--android:layout_marginRight="36px"-->
+    <!--android:src="@mipmap/destination" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="天津宝坻区" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2px"-->
+    <!--android:layout_marginTop="42px"-->
+    <!--android:background="#cccccc" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="60px">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="94px"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="货物详情"-->
+    <!--android:textColor="#666"-->
+    <!--android:textSize="40px"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="40px"-->
+    <!--android:gravity="center">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="重量/吨"-->
+    <!--android:textColor="#999"-->
+    <!--android:textSize="34px" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="250" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="32px"-->
+    <!--android:gravity="center">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="体积/方"-->
+    <!--android:textColor="#999"-->
+    <!--android:textSize="34px" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="450" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_avatar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:src="@mipmap/release_complete_avatar" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="56px"-->
+    <!--android:layout_toRightOf="@+id/iv_avatar"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="服务要求"-->
+    <!--android:textColor="#666"-->
+    <!--android:textSize="40px"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="40px"-->
+    <!--android:text="门到门服务"-->
+    <!--android:textColor="#999"-->
+    <!--android:textSize="34px" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="32px"-->
+    <!--android:text="增值税专用发票"-->
+    <!--android:textColor="#999"-->
+    <!--android:textSize="34px" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="44px"-->
+    <!--android:gravity="center"-->
+    <!--android:text="机械设备"-->
+    <!--android:textColor="#333"-->
+    <!--android:textSize="46px"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center">-->
+
+    <!--<Button-->
+    <!--style="@style/Base.Widget.AppCompat.Button.Borderless"-->
+    <!--android:layout_width="318px"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/btn_border_black"-->
+    <!--android:text="同意"-->
+    <!--android:textSize="44px" />-->
+
+    <!--<Button-->
+    <!--style="@style/Base.Widget.AppCompat.Button.Borderless"-->
+    <!--android:layout_width="318px"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="128px"-->
+    <!--android:background="@drawable/btn_border_black"-->
+    <!--android:text="拒绝"-->
+    <!--android:textSize="44px" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <FrameLayout
+        android:id="@+id/fl_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7f000000"
+        android:clipChildren="false"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="34px"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:layout_marginTop="34px"
+            android:clipChildren="false" />
+
+    </FrameLayout>
+
+</RelativeLayout>

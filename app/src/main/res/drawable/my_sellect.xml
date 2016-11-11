@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--我的页面按钮的选择-->
+    <!-- 默认时的背景图片-->
+    <item android:drawable="@mipmap/user_normal" />
+    <item android:drawable="@mipmap/user_normal" android:state_pressed="false"/>
+    <!-- 触摸模式按下时的背景图片 -->
+    <item android:drawable="@mipmap/user_selected" android:state_enabled="true" />
+</selector>
